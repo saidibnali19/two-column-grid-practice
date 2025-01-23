@@ -1,0 +1,76 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Utility classes */
+.wrapper {
+    max-width: 60rem;
+    margin-inline: auto;
+    padding: 1rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.lime {
+    background-color: lime;
+}
+
+.magenta {
+    background-color: magenta;
+}
+
+.dodgerblue {
+    background-color: dodgerblue;
+}
+/* Components */
+.lime,
+.dodgerblue,
+.magenta {
+    min-height: 30vh;
+}
+
+div:has(> .lime) {
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+
+    .dodgerblue {
+        grid-column: span 2;
+    }
+}
